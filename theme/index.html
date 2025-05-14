@@ -1,38 +1,36 @@
 <!DOCTYPE html>
-
-<!--
- // WEBSITE: https://themefisher.com
- // TWITTER: https://twitter.com/themefisher
- // FACEBOOK: https://www.facebook.com/themefisher
- // GITHUB: https://github.com/themefisher/
--->
-
 <html lang="zxx">
 
 <head>
   <meta charset="utf-8">
-  <title>GoDocs documentation theme</title>
+  <title>CyberCentre - CASUD</title>
 
   <!-- mobile responsive meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   <!-- theme meta -->
-  <meta name="theme-name" content="godocs-bulma" />
+  <meta name="theme-name" content="CyberCentre-CASUD" />
   
   <!-- ** Plugins Needed for the Project ** -->
   <!-- plugins -->
-  <link rel="stylesheet" href="plugins/bulma/bulma.min.css">
-  <link rel="stylesheet" href="plugins/themify-icons/themify-icons.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/@icon/themify-icons/themify-icons.css">
+  
   <!-- Main Stylesheet -->
   <link href="css/style.css" rel="stylesheet">
   
   <!--Favicon-->
   <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="images/favicon.jpg" type="image/x-icon">
 
+  <!-- JS -->
+  <script src="js/ymlData.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/docs-nav.js" type="module"></script>
 </head>
 
 <body>
+
 
 <nav class="navbar is-sticky-top navigation" role="navigation" aria-label="main navigation">
    <div class="container">
@@ -50,15 +48,14 @@
    
       <div id="navbar-links" class="navbar-menu">
          <div class="navbar-start ml-auto">
-            <a class="navbar-item" href="index.html">Home</a>
-            <a class="navbar-item" href="list.html">Inner Page</a>
-            <a class="navbar-item" href="search.html">Search Page</a>
+            <a class="navbar-item" href="index.html">Accueil</a>
+            <a class="navbar-item" href="documentation.html">Documentation</a>
          </div>
    
          <div class="navbar-end ml-0">
             <div class="navbar-item py-0">
-               <a href="changelog.html" class="btn btn-sm btn-outline-primary ml-4">changelog</a>
-               <a href="contact.html" class="btn btn-sm btn-primary ml-4">contact</a>
+               <a href="https://www.lemondeinformatique.fr/securite-informatique-3.html" target="_blank" class="btn btn-sm btn-outline-primary ml-4">Actu Cyber</a>
+               <a href="contact.html" class="btn btn-sm btn-primary ml-4">Assistance</a>
             </div>
          </div>
       </div>
@@ -70,16 +67,20 @@
    <div class="container">
       <div class="columns is-justify-content-space-between is-align-items-center">
          <div class="column is-7-desktop has-text-centered-mobile has-text-centered-tablet has-text-left-desktop">
-            <h1 class="mb-4">Documentation Theme By Themefisher Team</h1>
-            <p class="mb-4">Lorem ipsum dolor amet, consetetur sadiffspscing elitr, diam nonumy invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua At.</p>
+            <h1 class="mb-4">CASUD, Ensemble, protégeons notre collectivité.</h1>
+            <p class="mb-4">Bienvenue sur l&rsquo;espace cybersécurité de la CASUD. 
+               Ce portail a pour mission de vous aider à mieux comprendre les enjeux de la sécurité numérique, adopter les bons réflexes au quotidien, et contribuer activement à la protection de nos données, services et équipements.</p>
             <form class="search-wrapper" action="search.html">
-               <input id="search-by" name="s" type="search" class="input input-lg"
-                  placeholder="Search Here...">
+               <input id="cyber-search" name="s" type="search" class="input input-lg"
+                  placeholder="Rechercher dans la documentation...">
                <button type="submit" class="btn btn-primary">Search</button>
             </form>
+            <div id="search-results" class="results-section">
+               <!-- Les résultats de recherche seront affichés ici -->
+           </div>
          </div>
          <div class="column is-4-desktop hidden-on-tablet">
-            <img src="images/banner.jpg" alt="illustration" class="img-fluid">
+            <img src="images/banner.png" alt="illustration" class="img-fluid">
          </div>
       </div>
    </div>
@@ -89,16 +90,16 @@
 <!-- topics -->
 <section class="section pb-0">
    <div class="container">
-      <h2 class="section-title">Bcolumnsse Your Topics</h2>
+      <h2 class="section-title">Explorez nos Thématiques de Sensibilisation</h2>
       <div class="columns is-multiline">
          <!-- topic -->
          <div class="column is-3-widescreen is-4-desktop is-6-tablet">
             <div class="card match-height">
                <div class="card-body">
-                  <i class="card-icon ti-panel mb-5"></i>
-                  <h3 class="card-title h4">Basic Startup</h3>
-                  <p class="card-text">Cras at dolor eget urna varius faucibus tempus in elit dolor sit amet.</p>
-                  <a href="list.html" class="stretched-link"></a>
+                  <i class="card-icon ti ti-shield mb-5"></i>
+                  <h3 class="card-title h4">Les Bases</h3>
+                  <p class="card-text">Découvrez les notions clés pour mieux comprendre les risques numériques et adopter les bons réflexes.</p>
+                  <a href="documentation.html" class="stretched-link" onclick="localStorage.setItem('currentDoc', 'bases/bases')"></a>
                </div>
             </div>
          </div>
@@ -106,10 +107,10 @@
          <div class="column is-3-widescreen is-4-desktop is-6-tablet">
             <div class="card match-height">
                <div class="card-body">
-                  <i class="card-icon ti-credit-card mb-5"></i>
-                  <h3 class="card-title h4">Account Bill</h3>
-                  <p class="card-text">Cras at dolor eget urna varius faucibus tempus in elit dolor sit amet.</p>
-                  <a href="list.html" class="stretched-link"></a>
+                  <i class="card-icon ti ti-target mb-5"></i>
+                  <h3 class="card-title h4">Ne pas être piéger</h3>
+                  <p class="card-text">Apprenez à repérer les tentatives de fraude et à protéger vos accès les plus sensibles.</p>
+                  <a href="documentation.html" class="stretched-link"  onclick="localStorage.setItem('currentDoc', 'ne-pas-etre-piege/ne-pas-etre-piege')"></a>
                </div>
             </div>
          </div>
@@ -117,10 +118,10 @@
          <div class="column is-3-widescreen is-4-desktop is-6-tablet">
             <div class="card match-height">
                <div class="card-body">
-                  <i class="card-icon ti-package mb-5"></i>
-                  <h3 class="card-title h4">Our Features</h3>
-                  <p class="card-text">Cras at dolor eget urna varius faucibus tempus in elit dolor sit amet.</p>
-                  <a href="list.html" class="stretched-link"></a>
+                  <i class="card-icon ti ti-desktop mb-5"></i>
+                  <h3 class="card-title h4">Télétravail & Sécurité</h3>
+                  <p class="card-text">Bonnes pratiques à adopter en télétravail et en mobilité.</p>
+                  <a href="documentation.html" class="stretched-link" onclick="localStorage.setItem('currentDoc', 'teletravail-et-securite/teletravail-et-securite')"></a>
                </div>
             </div>
          </div>
@@ -128,10 +129,10 @@
          <div class="column is-3-widescreen is-4-desktop is-6-tablet">
             <div class="card match-height">
                <div class="card-body">
-                  <i class="card-icon ti-settings mb-5"></i>
-                  <h3 class="card-title h4">Theme Facility</h3>
-                  <p class="card-text">Cras at dolor eget urna varius faucibus tempus in elit dolor sit amet.</p>
-                  <a href="list.html" class="stretched-link"></a>
+                  <i class="card-icon ti ti-lock mb-5"></i>
+                  <h3 class="card-title h4">Sécurité des locaux</h3>
+                  <p class="card-text">Protéger l&rsquo;accès physique aux équipements : badges, postes, écrans, clés USB...</p>
+                  <a href="documentation.html" class="stretched-link" onclick="localStorage.setItem('currentDoc', 'securite-des-locaux/securite-locaux')"></a>
                </div>
             </div>
          </div>
@@ -143,99 +144,95 @@
 <!-- faq -->
 <section class="section pb-0">
    <div class="container">
-      <h2 class="section-title">Mostly Asked Questions</h2>
-      <div class="columns masonry-wrapper">
-         <!-- faq item -->
-         <div class="column is-6-desktop">
-            <div class="card card-lg">
-               <div class="card-body">
-                  <h3 class="card-title h5">Will updates also be free?</h3>
-                  <p class="card-text content">Lorem, <a href="https://examplesite.com">link</a> <em>ipsum</em> dolor
-                     sit amet consectetur adipisicing elit. Cumque praesentium nisi officiis maiores quia sapiente totam
-                     omnis vel sequi corporis ipsa incidunt reprehenderit recusandae maxime perspiciatis iste placeat
-                     architecto, mollitia delectus ut ab quibusdam. Magnam cumque numquam tempore reprehenderit illo,
-                     unde cum omnis vel sed temporibus. mollitia delectus ut ab quibusdam. Magnam cumque numquam tempore
-                     reprehenderit illo, unde cum
-                     omnis vel sed temporibus. mollitia delectus ut ab quibusdam. Magnam cumque numquam tempore
-                     reprehenderit
-                     illo, unde cum omnis vel sed temporibus.</p>
-               </div>
-            </div>
+     <h2 class="section-title">FAQ – Questions fréquentes</h2>
+     <div class="masonry-wrapper">
+       <div class="masonry">
+         
+         <div class="masonry-item card card-lg">
+           <div class="card-body">
+             <h3 class="card-title h5">Pourquoi la cybersécurité est-elle cruciale pour moi, en tant qu'agent de la CASUD ?</h3>
+             <p class="card-text content">
+               Vous êtes directement impliqué(e) dans la gestion des données des citoyens, des ressources publiques et des services essentiels à notre collectivité. Chaque jour, vous manipulez des informations sensibles, qu'il s'agisse de documents administratifs, de coordonnées personnelles, ou encore de données financières. <strong>Vous êtes la première ligne de défense</strong> contre les cyberattaques, car un simple clic sur un lien malveillant peut compromettre l'ensemble du réseau de la CASUD. La cybersécurité n'est pas uniquement la responsabilité de la DSI, elle repose également sur vos bonnes pratiques numériques au quotidien.
+             </p>
+           </div>
          </div>
-         <!-- faq item -->
-         <div class="column is-6-desktop">
-            <div class="card card-lg">
-               <div class="card-body">
-                  <h3 class="card-title h5">Discounts for students and Non Profit Organizations?</h3>
-                  <p class="card-text content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque
-                     praesentium
-                     nisi officiis maiores quia sapiente totam omnis vel sequi corporis ipsa incidunt reprehenderit
-                     recusandae
-                     maxime perspiciatis iste placeat architecto.</p>
-               </div>
-            </div>
+ 
+         <div class="masonry-item card card-lg">
+           <div class="card-body">
+             <h3 class="card-title h5">Comment créer un mot de passe conforme aux règles de la CASUD ?</h3>
+             <p class="card-text content">
+               Un mot de passe sécurisé doit contenir au minimum <strong>12 caractères</strong> et inclure des lettres majuscules, des lettres minuscules, des chiffres et des symboles spéciaux. Par exemple : <code>Az3$!kLq9mW2</code>. Il est essentiel de ne pas réutiliser le même mot de passe pour différents services (ex : messagerie, badgeuse, accès VPN). En cas de compromission d'un service, cela limite les risques pour les autres. La DSI recommande un changement régulier des mots de passe, ainsi que l'activation de l'authentification à deux facteurs (2FA) lorsque cela est possible. 
+             </p>
+           </div>
          </div>
-         <!-- faq item -->
-         <div class="column is-6-desktop">
-            <div class="card card-lg">
-               <div class="card-body">
-                  <h3 class="card-title h5">I need something unique, Can you make it?</h3>
-                  <p class="card-text content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque
-                     praesentium
-                     nisi officiis maiores quia sapiente totam omnis vel sequi corporis ipsa incidunt reprehenderit
-                     recusandae
-                     maxime perspiciatis iste placeat architecto, mollitia delectus <a
-                        href="https://examplesite.com">link</a>
-                     ut ab quibusdam. Magnam cumque numquam tempore reprehenderit illo, unde cum omnis vel sed
-                     temporibus,
-                     repudiandae impedit nam ad enim porro, qui labore fugiat quod suscipit fuga necessitatibus.
-                     Perferendis,
-                     ipsum?</p>
-               </div>
-            </div>
+ 
+         <div class="masonry-item card card-lg">
+           <div class="card-body">
+             <h3 class="card-title h5">Comment repérer un mail frauduleux (phishing) à la CASUD ?</h3>
+             <p class="card-text content">
+               Un mail frauduleux, ou <strong>phishing</strong>, vise à vous soutirer des informations confidentielles ou à infecter votre poste de travail. Soyez vigilant(e) aux signes suivants :
+               <ul>
+                 <li>Expéditeur inconnu ou adresse suspecte (ex : <em>support.casud@gmail.com</em>).</li>
+                 <li>Formulations urgentes ou menaçantes (ex : "Action immédiate requise").</li>
+                 <li>Pièces jointes inattendues ou douteuses.</li>
+                 <li>Liens hypertextes étranges : passez votre souris dessus sans cliquer pour voir l'adresse réelle.</li>
+               </ul>
+               En cas de doute, ne cliquez sur aucun lien, n'ouvrez aucune pièce jointe, et <strong>signalez immédiatement l'email à la DSI</strong>.
+             </p>
+           </div>
          </div>
-         <!-- faq item -->
-         <div class="column is-6-desktop">
-            <div class="card card-lg">
-               <div class="card-body">
-                  <h3 class="card-title h5">Is there any documentation and support?</h3>
-                  <p class="card-text content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque
-                     praesentium
-                     nisi officiis maiores quia sapiente totam omnis vel sequi corporis ipsa incidunt reprehenderit
-                     recusandae
-                     maxime perspiciatis iste placeat architecto, mollitia delectus <a
-                        href="https://examplesite.com">link</a>
-                     ut ab quibusdam.</p>
-               </div>
-            </div>
+ 
+         <div class="masonry-item card card-lg">
+           <div class="card-body">
+             <h3 class="card-title h5">Que se passe-t-il si je clique sur un lien malveillant ?</h3>
+             <p class="card-text content">
+               Un simple clic sur un lien malveillant peut avoir de lourdes conséquences : 
+               <ul>
+                 <li>Installation d'un <strong>virus</strong> ou d'un <strong>ransomware</strong> qui peut chiffrer vos données.</li>
+                 <li>Vol de vos identifiants de connexion (courrier, intranet, VPN).</li>
+                 <li>Prise de contrôle à distance de votre poste par un cybercriminel.</li>
+               </ul>
+               Pas de panique : <strong>déconnectez immédiatement votre poste d'Internet</strong> (câble réseau ou Wi-Fi) et <strong>prévenez la DSI sans délai</strong>.
+             </p>
+           </div>
          </div>
-         <!-- faq item -->
-         <div class="column is-6-desktop">
-            <div class="card card-lg">
-               <div class="card-body">
-                  <h3 class="card-title h5">Any refunds?</h3>
-                  <p class="card-text content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque
-                     praesentium
-                     nisi officiis maiores quia sapiente totam omnis vel sequi corporis ipsa incidunt reprehenderit
-                     recusandae
-                     maxime perspiciatis iste placeat architecto.</p>
-               </div>
-            </div>
+ 
+         <div class="masonry-item card card-lg">
+           <div class="card-body">
+             <h3 class="card-title h5">Mon poste peut-il être infecté sans que je m’en rende compte ?</h3>
+             <p class="card-text content">
+               Oui, certains logiciels malveillants (malwares) sont conçus pour être discrets. Ils peuvent :
+               <ul>
+                 <li>Surveiller vos frappes clavier (<em>keylogger</em>) pour voler vos identifiants.</li>
+                 <li>Accéder à vos fichiers et les envoyer à des tiers.</li>
+                 <li>Créer un accès distant permettant à un pirate d'explorer votre ordinateur sans que vous le sachiez.</li>
+               </ul>
+               Pour limiter les risques, il est important de maintenir votre système à jour, d’utiliser un antivirus performant et de suivre les consignes de sécurité de la DSI.
+             </p>
+           </div>
          </div>
-         <!-- faq item -->
-         <div class="column is-6-desktop">
-            <div class="card card-lg">
-               <div class="card-body">
-                  <h3 class="card-title h5">What is a product key?</h3>
-                  <p class="card-text content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque
-                     praesentium
-                     nisi officiis maiores quia sapiente totam omnis vel sequi corporis ipsa incidunt</p>
-               </div>
-            </div>
+ 
+         <div class="masonry-item card card-lg">
+           <div class="card-body">
+             <h3 class="card-title h5">Que faire si je soupçonne une cyberattaque ?</h3>
+             <p class="card-text content">
+               Si vous suspectez un incident de cybersécurité (ordinateur lent, comportements anormaux, fichiers chiffrés, fenêtres suspectes, etc.), voici les étapes à suivre :
+               <ul>
+                 <li>**Déconnectez immédiatement votre câble réseau** ou désactivez le Wi-Fi pour isoler la machine.</li>
+                 <li>Ne redémarrez pas l'ordinateur, cela pourrait aggraver la situation.</li>
+                 <li>Prévenez la DSI dès que possible pour une analyse approfondie.</li>
+                 <li>Ne tentez pas de "réparer" vous-même, cela pourrait compromettre les preuves numériques.</li>
+               </ul>
+               Votre réactivité est essentielle pour limiter les dégâts potentiels.
+             </p>
+           </div>
          </div>
-      </div>
+ 
+       </div>
+     </div>
    </div>
-</section>
+ </section>
+ 
 <!-- /faq -->
 
 <!-- call to action -->
@@ -246,10 +243,9 @@
             <img src="images/cta-illustration.jpg" class="img-fluid" alt="">
          </div>
          <div class="column is-8-desktop has-text-centered-mobile has-text-centered-tablet has-text-left-desktop">
-            <h2 class="mb-3">Still Didn&rsquo;t Find Your Answer?</h2>
-            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam <br> nonumy eirmod tempor invidunt ut
-               labore et dolore magna aliquyam</p>
-            <a href="contact.html" class="btn btn-primary">Submit a ticket</a>
+            <h2 class="mb-3">Toujours pas trouvé votre réponse ?</h2>
+            <p>Si vous avez des questions spécifiques concernant la cybersécurité ou si vous avez besoin d’assistance, n'hésitez pas à nous contacter. Nous sommes là pour vous aider à mieux comprendre les enjeux et vous accompagner dans l’application des bonnes pratiques en matière de sécurité numérique.</p>
+            <a href="contact.html" class="btn btn-primary">Contacter la DSI</a>
          </div>
       </div>
    </div>
@@ -261,39 +257,24 @@
       <div class="columns is-multiline is-align-items-center border-bottom py-5">
          <div class="column is-4-desktop is-12-tablet">
             <ul class="list-inline footer-menu has-text-centered has-text-left-desktop">
-               <li class="list-inline-item"><a href="changelog.html">Changelog</a></li>
-               <li class="list-inline-item"><a href="contact.html">contact</a></li>
-               <li class="list-inline-item"><a href="search.html">Search</a></li>
+               <li class="list-inline-item"><a href="https://www.lemondeinformatique.fr/securite-informatique-3.html" target="_blank">Actu Cyber</a></li>
+               <li class="list-inline-item"><a href="contact.html">Assistance</a></li>
+               <li class="list-inline-item"><a href="search.html">Recherche</a></li>
             </ul>
          </div>
          <div class="column is-4-desktop is-12-tablet">
             <a class="navbar-brand is-justify-content-center" href="index.html">
-               <img class="img-fluid" src="images/logo.png" alt="Hugo documentation theme">
+               <img class="img-fluid" src="images/logo.png" alt="Logo Centre Cyber CASUD" width="155px">
             </a>
          </div>
          <div class="column is-4-desktop is-12-tablet">
             <ul class="list-inline social-icons has-text-right-desktop has-text-centered">
-               <li class="list-inline-item"><a href="#"><i class="ti-facebook"></i></a></li>
-               <li class="list-inline-item"><a href="#"><i class="ti-twitter-alt"></i></a></li>
-               <li class="list-inline-item"><a href="#"><i class="ti-github"></i></a></li>
-               <li class="list-inline-item"><a href="#"><i class="ti-linkedin"></i></a></li>
+               <li class="list-inline-item"><a href="https://www.casud.re/" target="_blank"><i class="ti ti-world"></i></a></li>
             </ul>
          </div>
       </div>
       <div class="py-4 has-text-centered">
-         <small class="text-light">Copyright © 2020 - Design &amp; Developed by <a href="https://themefisher.com">themefisher</a></small>
+         <small class="text-light">Copyright ©casud 2025</small>
       </div>
    </div>
 </footer>
-
-<!-- plugins -->
-<script src="plugins/jQuery/jquery.min.js"></script>
-<script src="plugins/masonry/masonry.min.js"></script>
-<script src="plugins/clipboard/clipboard.min.js"></script>
-<script src="plugins/match-height/jquery.matchHeight-min.js"></script>
-
-<!-- Main Script -->
-<script src="js/script.js"></script>
-
-</body>
-</html>

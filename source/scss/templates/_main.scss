@@ -1,3 +1,6 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
 .search-wrapper {
    position: relative;
 
@@ -6,10 +9,10 @@
       border: 0;
       outline: 0;
       padding-left: 17px;
-      @extend .shadow;
+      @extend .shadow !optional;
 
       &::placeholder {
-         color: $text-color-light;
+         color: v.$text-color-light;
          font-size: 15px;
       }
 
@@ -30,7 +33,7 @@
       transform: translateY(-50%);
 
       i {
-         color: $primary-color;
+         color: v.$primary-color;
       }
    }
 }
@@ -41,13 +44,13 @@ input,
 optgroup,
 select,
 textarea {
-   font-family: $primary-font;
+   font-family: v.$primary-font;
 }
 
 
 .card {
-   @extend .shadow;
-   @extend .rounded;
+   @extend .shadow !optional;
+   @extend .rounded !optional;
    transition: .2s ease;
    border: 0;
 
@@ -58,15 +61,16 @@ textarea {
    }
 
    &-icon {
-      background: $primary-color;
-      color: $white;
+      background: v.$primary-color;
+      color: v.$white;
       height: 55px;
       width: 60px;
       line-height: 55px;
       text-align: center;
       font-size: 27px;
       display: block;
-      @extend .rounded;
+      border-radius: 6px;
+      @extend .rounded !optional;
       margin-top: 40px;
    }
 
@@ -97,8 +101,8 @@ textarea {
       width: 42px;
       line-height: 42px;
       text-align: center;
-      color: $white;
-      background: $primary-color;
+      color: v.$white;
+      background: v.$primary-color;
       border-radius: 6px;
    }
 }
@@ -109,18 +113,18 @@ textarea {
    a {
       display: block;
       padding: 10px;
-      color: $text-color;
+      color: v.$text-color;
       transition: .2s ease;
 
       &:hover {
-         color: $primary-color;
+         color: v.$primary-color;
       }
    }
 }
 
 /* sidenav */
 .sidenav {
-   border-right: 1px solid $border-color;
+   border-right: 1px solid v.$border-color;
    padding-right: 20px;
    padding-left: 30px;
 
@@ -131,14 +135,14 @@ textarea {
    &>li {
       a {
          padding: 20px 0;
-         color: $text-color-dark;
+         color: v.$text-color-dark;
          display: block;
          font-size: 18px;
          font-weight: 500;
       }
 
       &:not(:last-child) {
-         border-bottom: 1px solid $border-color;
+         border-bottom: 1px solid v.$border-color;
       }
    }
 
@@ -146,11 +150,18 @@ textarea {
       ul {
          display: none;
       }
+      /* 🟢 Bullet point uniquement pour les éléments actifs */
+      .parent .sidelist &.active::before {
+         content: "● ";
+         color: v.$primary-color;
+         position: absolute;
+         left: -15px;
+      }
    }
 
    .parent {
       &>a {
-         color: $primary-color !important;
+         color: v.$primary-color !important;
          position: relative;
          margin-left: 10px;
 
@@ -161,7 +172,7 @@ textarea {
             top: 25%;
             height: 50%;
             width: 1px;
-            background: $primary-color;
+            background: v.$primary-color;
          }
       }
 
@@ -173,18 +184,15 @@ textarea {
             padding: 5px 0;
             font-size: 14px;
             font-weight: 400;
-            color: $text-color-dark;
+            color: v.$text-color-dark;
          }
 
          li.active>a {
-            margin-left: 10px;
+            
 
             &::before {
-               height: 5px;
-               width: 5px;
-               border-radius: 50%;
-               display: block;
-               top: 13px;
+               content: "● ";
+               color: v.$primary-color;
             }
          }
       }
@@ -208,7 +216,7 @@ textarea {
          display: inline-block;
          padding: 7px 0;
          font-size: 20px;
-         color: $text-color-dark;
+         color: v.$text-color-dark;
       }
    }
 }
@@ -218,7 +226,7 @@ textarea {
    justify-content: space-between;
 
    a {
-      color: $primary-color;
+      color: v.$primary-color;
       font-size: 18px;
       font-weight: 500;
    }
@@ -230,7 +238,7 @@ textarea {
 
 // code-tab
 .code-tabs {
-   border: 1px solid $border-color;
+   border: 1px solid v.$border-color;
    overflow: hidden;
    margin-bottom: 20px;
 
@@ -239,7 +247,7 @@ textarea {
 
       .nav-item {
          padding-left: 0;
-         border-right: 1px solid $border-color;
+         border-right: 1px solid v.$border-color;
 
          .nav-link {
             text-decoration: none;
@@ -252,10 +260,10 @@ textarea {
          }
 
          &.active {
-            background: $primary-color;
+            background: v.$primary-color;
 
             .nav-link {
-               color: $white;
+               color: v.$white;
             }
          }
       }
@@ -274,8 +282,8 @@ pre {
    position: relative;
 
    .copy-to-clipboard {
-      background: $primary-color;
-      color: $white;
+      background: v.$primary-color;
+      color: v.$white;
       cursor: pointer;
       padding: 4px 5px;
       line-height: 1;
@@ -298,7 +306,7 @@ pre {
    border: 0;
    border-radius: 0 0 6px 6px;
    box-shadow: 0px 50px 60px rgba(62, 62, 62, 0.102) !important;
-   background: $white;
+   background: v.$white;
 
    .autocomplete-suggestion {
       transition: .2s ease;
@@ -306,7 +314,7 @@ pre {
       font-weight: 500;
 
       &.selected {
-         background: $primary-color;
+         background: v.$primary-color;
       }
    }
 }
@@ -314,16 +322,16 @@ pre {
 
 .search-item {
    a {
-      color: $text-color-dark;
+      color: v.$text-color-dark;
       display: block;
 
       &:hover {
-         color: $primary-color;
+         color: v.$primary-color;
       }
    }
 
    &:not(:last-child) {
-      border-bottom: 1px solid $border-color;
+      border-bottom: 1px solid v.$border-color;
    }
 }
 
@@ -339,26 +347,26 @@ pre {
       height: 40px;
       background: transparent;
       border: 0;
-      border-bottom: 1px solid $border-color;
+      border-bottom: 1px solid v.$border-color;
       border-radius: 0;
       padding: 10px 0;
       box-shadow: none;
 
       &::placeholder {
          font-size: 13px;
-         color: $text-color-light;
+         color: v.$text-color-light;
       }
 
       &:focus {
          outline: 0;
-         border-color: $primary-color;
+         border-color: v.$primary-color;
          box-shadow: none;
       }
    }
 
    .custom-select {
       font-size: 13px;
-      color: $text-color-light;
+      color: v.$text-color-light;
    }
 
    textarea.input {
@@ -374,37 +382,37 @@ pre {
 
    &.added {
       background: #3778FF;
-      color: $white;
+      color: v.$white;
    }
 
    &.fixed {
       background: #F54773;
-      color: $white;
+      color: v.$white;
    }
 
    &.changed {
       background: #3AAA55;
-      color: $white;
+      color: v.$white;
    }
 
    &.depricated {
       background: #343434;
-      color: $white;
+      color: v.$white;
    }
 
    &.removed {
       background: #3bbfe4;
-      color: $white;
+      color: v.$white;
    }
 
    &.security {
       background: #F53535;
-      color: $white;
+      color: v.$white;
    }
 
    &.unreleased {
       background: #A037FF;
-      color: $white;
+      color: v.$white;
    }
 }
 
@@ -414,7 +422,7 @@ pre {
 
    .collapse-head {
       text-decoration: none;
-      color: $text-color;
+      color: v.$text-color;
       font-size: 18px;
       font-weight: 500;
       align-items: center;
@@ -422,7 +430,7 @@ pre {
 }
 
 :not(.highlight) pre {
-   background: $light;
+   background: v.$light;
 }
 
 // content style
@@ -443,7 +451,7 @@ pre {
 
    a {
       text-decoration: underline;
-      color: $primary-color;
+      color: v.$primary-color;
    }
 
    ol,
@@ -471,7 +479,7 @@ pre {
             height: 8px;
             width: 8px;
             border-radius: 50%;
-            background: $primary-color;
+            background: v.$primary-color;
             left: 3px;
             top: 8px;
          }
@@ -504,7 +512,7 @@ pre {
    }
 
    thead {
-      background: $light;
+      background: v.$light;
       margin-bottom: 0;
 
       tr {
@@ -528,16 +536,6 @@ pre {
       margin-bottom: 0;
    }
 
-   .notices p::before {
-      position: absolute;
-      top: 2px;
-      color: #fff;
-      font-family: "themify";
-      font-weight: 900;
-      content: "\e717";
-      left: 10px;
-   }
-
    .notices.note p {
       border-top: 30px solid #6ab0de;
       background: #e7f2fa;
@@ -548,7 +546,7 @@ pre {
       position: absolute;
       top: 2px;
       color: #fff;
-      left: 2rem;
+      left: 1rem;
    }
 
 
@@ -562,7 +560,7 @@ pre {
       position: absolute;
       top: 2px;
       color: #fff;
-      left: 2rem;
+      left: 1rem;
    }
 
    .notices.info p {
@@ -575,7 +573,7 @@ pre {
       position: absolute;
       top: 2px;
       color: #fff;
-      left: 2rem;
+      left: 1rem;
    }
 
 
@@ -589,18 +587,18 @@ pre {
       position: absolute;
       top: 2px;
       color: #fff;
-      left: 2rem;
+      left: 1rem;
    }
 
 
    blockquote {
       font-size: 20px !important;
-      color: $text-color-dark;
+      color: v.$text-color-dark;
       padding: 20px 40px;
-      border-left: 2px solid $primary-color;
+      border-left: 2px solid v.$primary-color;
       margin: 40px 0;
       font-weight: bold;
-      background: $light;
+      background: v.$light;
 
       p {
          margin-bottom: 0 !important;
@@ -619,7 +617,7 @@ pre {
    }
 }
 
-@include desktop {
+@include m.desktop {
    .hidden-on-tablet {
       display: none;
    }
@@ -630,7 +628,7 @@ pre {
 .code-tabs {
    overflow: hidden;
    margin-bottom: 20px;
-   background-color: $white;
+   background-color: v.$white;
 
    .tab-pane {
       display: none;
@@ -658,24 +656,84 @@ pre {
             text-decoration: none;
 
             &:focus {
-               border-color: $primary-color;
+               border-color: v.$primary-color;
             }
          }
 
          &.active a {
-            color: $white;
-            background-color: $primary-color;
-            border-color: $primary-color;
+            color: v.$white;
+            background-color: v.$primary-color;
+            border-color: v.$primary-color;
          }
       }
    }
 
    .tab-content {
       padding: 20px 15px;
-      border: 1px solid $border-color;
+      border: 1px solid v.$border-color;
    }
 }
 
 .no-pointer {
    pointer-events: none;
 }
+
+// Mansory Effects
+.masonry-wrapper {
+   margin-top: 2rem;
+ }
+ 
+ .masonry {
+   columns: 1;
+   column-gap: 1.5rem;
+ }
+ 
+ .masonry-item {
+   display: inline-block;
+   width: 100%;
+   margin-bottom: 1.5rem;
+   vertical-align: top;
+ }
+ 
+ @media only screen and (min-width: 600px) {
+   .masonry {
+     columns: 2;
+   }
+ }
+ 
+ @media only screen and (min-width: 900px) {
+   .masonry {
+     columns: 2;
+   }
+ }
+ 
+ .masonry-item,
+ .masonry-content {
+   border-radius: 8px;
+   overflow: hidden;
+ }
+ 
+ 
+
+ /* Search */ 
+ .search-result-item {
+   border-bottom: 1px solid #ccc;
+   padding: 10px 0;
+   margin-bottom: 10px;
+}
+
+.search-result-item h3 {
+   font-size: 18px;
+   margin: 0;
+}
+
+.search-result-item p {
+   font-size: 14px;
+   color: #555;
+}
+
+mark {
+   background-color: yellow;
+   font-weight: bold;
+}
+

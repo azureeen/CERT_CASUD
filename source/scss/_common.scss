@@ -1,16 +1,20 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+@use "sass:color";
+
 html {
    overflow-x: initial !important;
    overflow-y: initial !important;
 }
 
 body {
-   background-color: $body-color;
+   background-color: v.$body-color;
    overflow-x: hidden;
 }
 
 ::selection {
-   background: lighten($color: $primary-color, $amount: 10);
-   color: $white;
+   background: color.adjust($color: v.$primary-color, $lightness: 10%);
+   color: v.$white;
 }
 
 /* preloader */
@@ -61,7 +65,7 @@ select {
 }
 
 a:hover {
-   color: $primary-color;
+   color: v.$primary-color;
 }
 
 .slick-slide {
@@ -91,7 +95,7 @@ a:hover {
 }
 
 .border-default {
-   border-color: $border-color !important;
+   border-color: v.$border-color !important;
 }
 
 /* overlay */
@@ -106,7 +110,7 @@ a:hover {
       width: 100%;
       top: 0;
       left: 0;
-      background: $black;
+      background: v.$black;
       opacity: .5;
    }
 }
@@ -128,15 +132,15 @@ a:hover {
 }
 
 .bg-primary {
-   background: $primary-color !important;
+   background: v.$primary-color !important;
 }
 
 .text-primary {
-   color: $primary-color !important;
+   color: v.$primary-color !important;
 }
 
 .text-light {
-   color: $text-color-light !important;
+   color: v.$text-color-light !important;
 }
 
 .mb-10 {
@@ -199,11 +203,11 @@ a:hover {
 }
 
 .container {
-   @include desktop {
+   @include m.desktop {
       max-width: 765px;
    }
 
-   @include tablet {
+   @include m.tablet {
       max-width: 540px;
    }
 }

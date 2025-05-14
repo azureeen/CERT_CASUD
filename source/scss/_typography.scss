@@ -1,26 +1,28 @@
-/*  typography */
+@use 'variables' as v;
+@use 'mixins' as m;
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800&display=swap');
 
+/*  typography */
 body {
-  font-family: $primary-font;
+  font-family: v.$primary-font;
   -webkit-font-smoothing: antialiased;
   font-size: 16px;
   line-height: 1.6;
-  color: $text-color;
+  color: v.$text-color;
 }
 
 p, .paragraph {
   font-weight: 400;
-  color: $text-color;
+  color: v.$text-color;
   font-size: 16px;
   line-height: 26px;
-  font-family: $primary-font;
+  font-family: v.$primary-font;
   margin-bottom: 1rem;
 }
 
 h1,h2,h3,h4,h5,h6 {
-  color: $text-color-dark;
-  font-family: $primary-font;
+  color: v.$text-color-dark;
+  font-family: v.$primary-font;
   font-weight: 700;
   line-height: 1.2;
 }
@@ -28,7 +30,7 @@ h1,h2,h3,h4,h5,h6 {
 h1, .h1{
   font-size: 50px;
   font-weight: 800;
-  @include mobile {
+  @include m.mobile {
     font-size: 36px;
     font-weight: 600;
   }
@@ -37,7 +39,7 @@ h1, .h1{
 h2, .h2{
   font-size: 42px;
   font-weight: 800;
-  @include mobile {
+  @include m.mobile {
     font-size: 32px;
     font-weight: 600;
   }
@@ -45,7 +47,7 @@ h2, .h2{
 
 h3, .h3{
   font-size: 32px;
-  @include mobile {
+  @include m.mobile {
     font-size: 28px;
   }
 }

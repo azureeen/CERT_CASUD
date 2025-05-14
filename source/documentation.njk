@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+   {% include "header.htm" %}
+</head>
+
+<body>
+
+   {% include "navigation-inner.htm" %}
+
+   <section class="pt-5">
+      <div class="container shadow section-sm rounded">
+         <div class="columns is-multiline">
+            <div class="column is-3-desktop is-12-tablet">
+               <ul class="sidenav" id="sidebar-menu">
+                  <!-- sidebar -->
+               </ul>
+            </div>
+            <!-- main content -->
+            <div class="column is-8-desktop is-12-tablet">
+               <div class="px-4" id="content">
+                  <!-- Le contenu du document sera injecté ici -->
+               </div>
+
+               <!-- Pagination dynamique -->
+               <nav class="pagination">
+                  <button class="nav nav-prev" id="prevBtn">
+                     <i class="ti ti-arrow-left mr-2"></i>
+                     <span class="d-none d-md-block">Précédent</span>
+                  </button>
+                  <button class="nav nav-next" id="nextBtn">
+                     <span class="d-none d-md-block">Suivant</span>
+                     <i class="ti ti-arrow-right ml-2"></i>
+                  </button>
+               </nav>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   {% include "footer.htm" %}
+</body>
+
+</html>

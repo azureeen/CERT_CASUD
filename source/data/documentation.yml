@@ -1,0 +1,395 @@
+# Fichier documentation.yml
+sections:
+  bases:
+    title: "Les Bases de la Cybersécurité"
+    docs:
+      - id: "bases-introduction"
+        title: "Les Bases de la Cybersécurité"
+        sidebar_title: "Introduction"
+        content: |
+          <div class="content">
+            <p>Bienvenue dans la section dédiée aux bases de la cybersécurité. Ici, vous découvrirez les concepts fondamentaux pour protéger vos systèmes, vos données, et votre vie privée contre les cybermenaces.</p>
+
+            <ul>
+                <li>Comprendre les risques liés à la sécurité informatique.</li>
+                <li>Adopter les bonnes pratiques au quotidien.</li>
+                <li>Utiliser les outils nécessaires pour sécuriser vos informations.</li>
+                <li>Connaître la législation en vigueur pour rester conforme.</li>
+            </ul>
+
+            <div class="notices tip">
+                <p>✅ La cybersécurité commence par une bonne hygiène numérique. Chaque geste compte.</p>
+            </div>
+            <hr>
+          </div>
+        video: "https://www.youtube.com/embed/cWUVAZNEkYQ?si=Ykn1awe11vVn3w75"
+
+      - id: "bases-risques"
+        title: "Comprendre les Risques"
+        sidebar_title: "Risques" 
+        content: |
+          <div class="content">
+            <p>Avant de sécuriser, il faut comprendre ce qu&rsquo;on cherche à protéger. Voici les risques numériques les plus courants :</p>
+            
+            <ul>
+              <li><strong>Phishing</strong> : tentative de vol d&rsquo;informations via des emails frauduleux.</li>
+              <li><strong>Ransomware</strong> : prise en otage de vos données contre rançon.</li>
+              <li><strong>Fuite de données</strong> : perte de confidentialité (ex : données RH, médicales, clients).</li>
+              <li><strong>Intrusion</strong> : accès non autorisé au système d&rsquo;information.</li>
+              <li><strong>Déni de service (DDoS)</strong> : blocage d&rsquo;un site ou d&rsquo;un service via surcharge de requêtes.</li>
+            </ul>
+      
+            <div class="notices info">
+              <p>💡 La majorité des attaques réussies sont dues à des erreurs humaines ou un manque de vigilance.</p>
+            </div>
+            <hr>
+          </div>
+        video: ""
+
+      - id: "bases-bonnes-pratiques"
+        title: "Bonnes Pratiques au Quotidien"
+        sidebar_title: "Bonnes Pratiques" 
+        content: |
+          <div class="content">
+            <ul>
+              <li>Utilisez un <strong>mot de passe fort</strong> et unique par compte.</li>
+              <li>Activez la <strong>double authentification (MFA)</strong>.</li>
+              <li>Vérifiez toujours l’expéditeur avant de cliquer sur un lien dans un email.</li>
+              <li>Mettez à jour régulièrement vos logiciels et systèmes.</li>
+              <li>Sauvegardez vos données sur un support externe sécurisé.</li>
+            </ul>
+      
+            <div class="notices tip">
+              <p>✅ Pensez à former vos collègues, car la cybersécurité est l’affaire de tous.</p>
+            </div>
+            <hr>
+          </div>
+        video: ""
+
+      - id: "bases-outils-utiles"
+        title: "Outils pour Mieux Se Protéger"
+        sidebar_title: "Outils utiles" 
+        content: |
+          <div class="content">
+            <p>Voici quelques outils recommandés pour sécuriser vos usages :</p>
+      
+            <ul>
+              <li><strong>Gestionnaire de mots de passe</strong> : <a href="https://cloud.casud.re/apps/passwords/" alt="NextCloud Password">NextCloud Password</a>, Bitwarden, KeePass, Dashlane</li>
+              <li><strong>Antivirus</strong> : Windows Defender, Malwarebytes, Avast (pro)</li>
+              <li><strong>VPN</strong> : pour chiffrer vos connexions à distance</li>
+              <li><strong>Analyse de mail</strong> : VirusTotal, Google Safe Browsing</li>
+            </ul>
+      
+            <div class="notices note">
+              <p>🔒 Un outil seul ne suffit pas : l’humain reste la première ligne de défense.</p>
+            </div>
+      
+            <hr>
+          </div>
+        video: ""
+
+      - id: "bases-legislation"
+        title: "Notions de Législation"
+        sidebar_title: "Législation" 
+        content: |
+          <div class="content">
+            <ul>
+              <li><strong>RGPD</strong> : protège les données personnelles en Europe (traitement, consentement, droit à l’oubli...)</li>
+              <li><strong>NIS2</strong> : directive européenne imposant des obligations de cybersécurité aux organismes publics et privés.</li>
+              <li><strong>CNIL</strong> : autorité française chargée de la protection des données personnelles.</li>
+            </ul>
+      
+            <div class="notices info">
+              <p>⚠️ Une fuite de données peut entraîner des sanctions financières importantes et nuire à la réputation d’un organisme.</p>
+            </div>
+      
+            <hr>
+          </div>
+        video: "https://www.youtube.com/embed/ZdDMt9H_1l0?si=ZpDgEUBPo_YzbyPu"
+
+      - id: "bases-glossaire"
+        title: "Glossaire Cybersécurité"
+        sidebar_title: "Glossaire" 
+        content: |
+          <div class="content">
+            <br>
+              <dl>
+                <dt><strong>Phishing</strong></dt>
+                <dd>Hameçonnage visant à voler des informations en se faisant passer pour un tiers de confiance.</dd>
+        
+                <dt><strong>MFA</strong></dt>
+                <dd>Multi-Factor Authentication — Vérification par plusieurs moyens (mot de passe + SMS par exemple).</dd>
+        
+                <dt><strong>SI</strong></dt>
+                <dd>Système d’Information — ensemble des ressources (matérielles et logicielles) permettant de gérer l'information.</dd>
+        
+                <dt><strong>VPN</strong></dt>
+                <dd>Réseau privé virtuel qui permet de sécuriser une connexion sur un réseau non sécurisé.</dd>
+        
+                <dt><strong>EDR</strong></dt>
+                <dd>Endpoint Detection & Response — outil de surveillance avancée des postes de travail.</dd>
+              </dl>
+              <hr>
+            </div>
+        video: ""
+
+
+  ne_pas_etre_piege:
+    title: "Ne Pas Être Piégé"
+    docs:
+      - id: "ne-pas-etre-piege-introduction"
+        title: "Ne vous faites pas piégé"
+        sidebar_title: "Introduction" 
+        content: |
+         <div class="content">
+            <p>Les cyberattaques exploitent souvent des erreurs humaines ou des manipulations psychologiques. Voici quelques conseils pour éviter de tomber dans les pièges les plus courants :</p>
+            <ul>
+              <li>Ne cliquez jamais sur un lien ou une pièce jointe provenant d'un expéditeur inconnu.</li>
+              <li>Vérifiez toujours l'URL d'un site avant de saisir vos informations personnelles.</li>
+              <li>Méfiez-vous des messages urgents qui demandent une action rapide.</li>
+              <li>Activez l'authentification à deux facteurs (2FA) sur vos comptes critiques.</li>
+              <li>Utilisez un antivirus à jour et effectuez des analyses régulièrement.</li>
+            </ul>
+            <div class="notices tip">
+              <p>✅ En cas de doute, ne prenez aucun risque. Consultez un responsable ou un expert en sécurité.</p>
+            </div>
+            <hr>
+          </div>
+        video: "https://www.youtube.com/embed/hXyoRm1kkhE"
+
+      - id: "ne-pas-etre-piege-phishing"
+        title: "Phishing : Détecter et Éviter les Arnaques"
+        sidebar_title: "Phishing" 
+        content: |
+          <div class="content">
+            <p>Le phishing, ou hameçonnage, est une méthode utilisée par les cybercriminels pour récupérer des informations sensibles (mots de passe, informations bancaires, etc.) en se faisant passer pour un tiers de confiance (banque, administration, etc.).</p>
+      
+            <ul>
+              <li><strong>Signes de phishing :</strong> faute d’orthographe, URL suspecte, pièce jointe inconnue.</li>
+              <li><strong>Ne jamais :</strong> cliquer sur un lien douteux ou télécharger une pièce jointe non vérifiée.</li>
+              <li><strong>Vérifiez toujours :</strong> l’expéditeur et l’URL du site avant de fournir vos informations.</li>
+            </ul>
+      
+            <div class="notices tip">
+              <p>💡 Conseil : si vous avez un doute, contactez directement l’organisme concerné par téléphone.</p>
+            </div>
+      
+            <hr>
+          </div>
+        video: "https://www.youtube.com/embed/mwC2iNQuYr8?si=qLC-vrJ_I9XJPpss"  
+
+      - id: "ne-pas-etre-piege-ransomware"
+        title: "Ransomware : Comment S’en Protéger ?"
+        sidebar_title: "Ransomware" 
+        content: |
+          <div class="content">
+            <p>Un ransomware est un logiciel malveillant qui chiffre vos données et exige une rançon pour les récupérer. Les cybercriminels visent aussi bien les entreprises que les particuliers.</p>
+      
+            <ul>
+              <li><strong>Mesures de prévention :</strong> sauvegardes régulières, antivirus à jour, éviter les pièces jointes suspectes.</li>
+              <li><strong>En cas d'attaque :</strong> ne payez jamais la rançon ! Contactez les autorités et un expert en cybersécurité.</li>
+            </ul>
+      
+            <div class="notices info">
+              <p>⚠️ Une sauvegarde récente et hors ligne est le meilleur moyen de récupérer vos données sans payer.</p>
+            </div>
+      
+            <hr>
+          </div>
+        video: "https://www.youtube.com/embed/v4Xid_QkdAg?si=Rgd6g40A3eS4ZRrG"
+
+      - id: "ne-pas-etre-piege-fake-news"
+        title: "Fake News et Désinformation"
+        sidebar_title: "Fake News" 
+        content: |
+          <div class="content">
+            <p>Les fake news sont de fausses informations diffusées sur Internet pour manipuler l’opinion ou désinformer. Elles peuvent créer de la panique, influencer des élections ou porter atteinte à la réputation d’une entreprise.</p>
+      
+            <ul>
+              <li><strong>Vérifier les sources :</strong> toujours croiser les informations avec des sites fiables (AFP, Reuters, etc.).</li>
+              <li><strong>Observer le style :</strong> un titre trop sensationnel est souvent suspect.</li>
+              <li><strong>Analyser les images :</strong> des outils comme TinEye ou Google Images permettent de vérifier l’authenticité.</li>
+            </ul>
+      
+            <div class="notices tip">
+              <p>🧐 Conseil : ne partagez pas une information avant de l’avoir vérifiée.</p>
+            </div>
+      
+            <hr>
+          </div>
+        video: ""  
+
+      - id: "ne-pas-etre-piege-escroqueries"
+        title: "Escroqueries en Ligne et Fraudes Bancaires"
+        sidebar_title: "Escroqueries" 
+        content: |
+          <div class="content">
+            <p>Les arnaques en ligne sont multiples : faux sites d’achat, fausses loteries, arnaques sentimentales… Elles visent à dérober des informations bancaires ou à inciter au paiement frauduleux.</p>
+      
+            <ul>
+              <li><strong>Vérifiez les URL :</strong> les sites sécurisés commencent par <code>https://</code> et ont un cadenas.</li>
+              <li><strong>Ne divulguez jamais :</strong> vos informations bancaires par email ou téléphone.</li>
+              <li><strong>En cas de doute :</strong> contactez votre banque directement.</li>
+            </ul>
+      
+            <div class="notices info">
+              <p>💡 Astuce : privilégiez les paiements par carte virtuelle pour les achats en ligne.</p>
+            </div>
+            <hr>
+          </div>
+        video: "https://www.youtube.com/embed/0N0q8j3crp0?si=OpAnES3Ml7fEaJMj"
+
+      - id: "ne-pas-etre-piege-securiser-comptes"
+        title: "Sécuriser ses Comptes en Ligne"
+        sidebar_title: "Sécuriser ses Comptes" 
+        content: |
+          <div class="content">
+            <p>La sécurisation de vos comptes est essentielle pour éviter les usurpations et les piratages.</p>
+      
+            <ul>
+              <li><strong>Utilisez un mot de passe unique</strong> pour chaque compte, idéalement géré par un gestionnaire de mots de passe.</li>
+              <li><strong>Activez l’authentification à deux facteurs (2FA)</strong> lorsque c’est possible.</li>
+              <li><strong>Évitez les réseaux Wi-Fi publics</strong> pour accéder à vos informations sensibles.</li>
+              <li><strong>Changez vos mots de passe régulièrement</strong> et vérifiez les tentatives de connexion suspectes.</li>
+            </ul>
+      
+            <div class="notices note">
+              <p>🔒 La sécurité de vos comptes dépend aussi de la sécurité de votre ordinateur et de vos appareils mobiles.</p>
+            </div>
+            <hr>
+          </div>
+        video: "https://www.youtube.com/embed/0N0q8j3crp0?si=OpAnES3Ml7fEaJMj" 
+
+
+  teletravail-et-securite:
+    title: "Télétravail et Sécurité"
+    docs:
+      - id: "teletravail-et-securite-introduction"
+        title: "Sécuriser le Télétravail"
+        sidebar_title: "Introduction" 
+        content: |
+         <div class="content">
+            <p>Le télétravail est devenu une pratique courante, mais il expose les entreprises et les travailleurs à de nouveaux risques de cybersécurité. Travailler à distance nécessite une vigilance accrue pour protéger les informations sensibles et prévenir les attaques. Voici les bonnes pratiques à adopter :</p>
+            <ul>
+              <li>Utiliser un réseau privé virtuel (<strong>VPN</strong>) pour sécuriser les connexions Internet.</li>
+              <li>Éviter les réseaux Wi-Fi publics ou non sécurisés lors de l'accès à des informations confidentielles.</li>
+              <li>Configurer un pare-feu personnel pour filtrer le trafic réseau.</li>
+              <li>Mettre à jour régulièrement les systèmes d'exploitation, logiciels, et antivirus.</li>
+              <li>Activer l'authentification multi-facteurs (<strong>MFA</strong>) pour renforcer la sécurité des comptes sensibles.</li>
+              <li>Sauvegarder régulièrement les données sur un support sécurisé.</li>
+              <li>Verrouiller les sessions lorsque l'on s'éloigne de son poste de travail, même pour quelques minutes.</li>
+            </ul>
+            <div class="notices tip">
+              <p>✅ Le télétravail offre de la flexibilité, mais il ne doit pas se faire au détriment de la sécurité. Soyez vigilant et adoptez les bonnes pratiques.</p>
+            </div>
+            <hr>
+          </div>
+
+        video: ""
+
+      - id: "teletravail-connexion-internet"
+        title: "Connexion Internet Sécurisée"
+        sidebar_title: "Connexion Internet" 
+        content: |
+         <div class="content">
+            <p>Travailler depuis chez soi implique d’avoir une connexion Internet fiable et sécurisée. Voici les recommandations :</p>
+      
+            <ul>
+              <li><strong>Privilégiez les connexions filaires (Ethernet)</strong> plutôt que le Wi-Fi.</li>
+              <li><strong>Si vous utilisez le Wi-Fi :</strong> changez le mot de passe par défaut de votre box et utilisez le chiffrement WPA3 si possible.</li>
+              <li><strong>Désactivez le WPS :</strong> une fonctionnalité souvent vulnérable.</li>
+              <li><strong>Masquez le SSID de votre réseau :</strong> pour éviter qu’il ne soit visible par tous.</li>
+            </ul>
+      
+            <div class="notices info">
+              <p>⚠️ Évitez les réseaux Wi-Fi publics. Si vous devez les utiliser, activez un VPN.</p>
+            </div>
+      
+            <hr>
+          </div>
+        video: ""  
+
+      - id: "teletravail-gestion-donnees"
+        title: "Gestion des Données Sensibles"
+        sidebar_title: "Données Sensibles" 
+        content: |
+          <div class="content">
+            <p>La manipulation de données sensibles depuis un environnement non contrôlé nécessite une vigilance particulière :</p>
+      
+            <ul>
+              <li><strong>Évitez le stockage local :</strong> préférez les espaces sécurisés de l’entreprise.</li>
+              <li><strong>Utilisez un logiciel de chiffrement :</strong> pour protéger les fichiers avant leur envoi.</li>
+              <li><strong>Vérifiez les autorisations :</strong> ne partagez pas les documents avec des personnes non autorisées.</li>
+              <li><strong>Sauvegardez régulièrement :</strong> dans un espace sécurisé, idéalement chiffré.</li>
+            </ul>
+      
+            <div class="notices info">
+              <p>⚠️ En cas de perte ou de vol de l’appareil, informez immédiatement votre entreprise.</p>
+            </div>
+      
+            <hr>
+          </div>
+        video: ""
+
+      - id: "teletravail-menaces-specifiques"
+        title: "Les Menaces Spécifiques du Télétravail"
+        sidebar_title: "Menaces Spécifiques" 
+        content: |
+          <div class="content">
+            <p>Le télétravail expose à des menaces spécifiques :</p>
+
+            <ul>
+              <li><strong>Phishing :</strong> les attaques par email ciblent les télétravailleurs.</li>
+              <li><strong>Usurpation d’identité :</strong> les cybercriminels peuvent se faire passer pour un collègue ou un fournisseur.</li>
+              <li><strong>Vol de données :</strong> les connexions non sécurisées augmentent le risque.</li>
+            </ul>
+      
+            <div class="notices tip">
+              <p>💡 Conseil : soyez particulièrement vigilant avec les emails inattendus ou urgents.</p>
+            </div>
+            <hr>
+          </div>
+        video: ""  
+
+      - id: "teletravail-poste-de-travail"
+        title: "Sécuriser son Poste de Travail"
+        sidebar_title: "Poste de Travail"
+        content: |
+          <div class="content">
+            <p>Le télétravail nécessite une vigilance accrue pour sécuriser son poste de travail. Voici les bonnes pratiques à adopter :</p>
+      
+            <ul>
+              <li><strong>Verrouillez votre session :</strong> lorsque vous vous absentez, même quelques minutes.</li>
+              <li><strong>Utilisez un mot de passe fort :</strong> combinant lettres, chiffres et symboles.</li>
+              <li><strong>Installez un antivirus et un pare-feu :</strong> pour protéger contre les attaques.</li>
+              <li><strong>Évitez d’utiliser un compte administrateur :</strong> pour les tâches quotidiennes.</li>
+            </ul>
+      
+            <div class="notices tip">
+              <p>💡 Conseil : activez le chiffrement de votre disque dur pour protéger vos données en cas de perte ou de vol.</p>
+            </div>
+      
+            <hr>
+          </div>
+        video: "https://www.youtube.com/embed/0N0q8j3crp0?si=OpAnES3Ml7fEaJMj"
+
+      - id: "teletravail-vpn-acces-distance"
+        title: "VPN et Accès à Distance"
+        sidebar_title: "Accès via VPN" 
+        content: |
+          <div class="content">
+            <p>Le VPN (Virtual Private Network) est un outil essentiel pour sécuriser vos connexions à distance.</p>
+      
+            <ul>
+              <li><strong>Chiffrement :</strong> vos données sont protégées lors de leur transit.</li>
+              <li><strong>Masquage de l’adresse IP :</strong> votre localisation réelle est dissimulée.</li>
+              <li><strong>Accès distant sécurisé :</strong> permet de se connecter au réseau de l’entreprise de manière sécurisée.</li>
+            </ul>
+      
+            <div class="notices tip">
+              <p>💡 Conseil : choisissez un VPN sans journaux (no-log policy) pour une confidentialité maximale.</p>
+            </div>
+      
+            <hr>
+          </div>
+        video: "https://www.youtube.com/embed/0N0q8j3crp0?si=OpAnES3Ml7fEaJMj" 

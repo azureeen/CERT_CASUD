@@ -1,13 +1,16 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
 .navigation {
    transition: .2s ease;
    padding: 15px 0;
 
    &.nav-bg {
-      background: $white;
-      @extend .shadow;
+      background: v.$white;
+      @extend .shadow !optional;
    }
 
-   @include desktop {
+   @include m.desktop {
       .form-inline {
          width: 100%;
 
@@ -20,16 +23,16 @@
 
 .navbar-item {
    text-transform: capitalize;
-   color: $text-color-dark;
+   color: v.$text-color-dark;
    &:focus,
    &:hover {
       background-color: transparent !important;
-      color: $primary-color !important;
+      color: v.$primary-color !important;
    }
 }
 
 .navbar-brand .navbar-item {
-   @include desktop {
+   @include m.desktop {
       padding-left: 0;
    }
 }
@@ -56,15 +59,15 @@
    height: 2.7rem;
    width: 2.7rem;
    border: 1px solid #ddd;
-   background-color: $white;
+   background-color: v.$white;
    border-radius: 2px;
    top: 5px;
    &:hover {
-      background-color: $white;
+      background-color: v.$white;
    }
 }
 
-@include desktop {
+@include m.desktop {
    .navbar-menu {
       padding: 1.5rem 0;
       text-align: center;

@@ -1,24 +1,16 @@
 /*!------------------------------------------------------------------
 [MAIN STYLESHEET]
 
-PROJECT:	Project Name
-VERSION:	Versoin Number
+PROJECT:    Project Name
+VERSION:    Version Number
 -------------------------------------------------------------------*/
 
 /*------------------------------------------------------------------
 [TABLE OF CONTENTS]
 -------------------------------------------------------------------*/
 
-@import 'variables';
-
-@import 'mixins';
-
-@import 'typography';
-
-@import 'buttons';
-
-@import 'common';
-
-@import 'templates/navigation.scss';
-
-@import 'templates/main.scss';
+@use 'typography' as *;
+@use 'buttons' as *;
+@use 'common' as *;
+@use 'templates/navigation' as *;
+@use 'templates/main' as *;
