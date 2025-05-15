@@ -737,3 +737,11 @@ mark {
    font-weight: bold;
 }
 
+.keyboard-press {
+   box-shadow: 0px 3px 0px #999999;
+}
+
+.keyboard-press:active {
+   top: -1px;
+ }
+

@@ -29,8 +29,8 @@
 
   <!-- JS -->
   <script src="js/ymlData.js"></script>
-  <script src="js/search.js"></script>
-  <script src="js/docs-nav.js" type="module"></script>
+  <script src="js/docs.js" type="module"></script>
+  <script src="js/search.js" type="module"></script>
 </head>
 
 <body>
@@ -56,18 +56,18 @@
       <div id="navbar-links" class="navbar-menu">
          <div class="navbar-start ml-auto">
             <a class="navbar-item" href="index.html">Accueil</a>
-            <a class="navbar-item" href="search.html">Rechercher</a>
+            <a class="navbar-item" href="#faq">FAQ</a>
          </div>
    
          <div class="navbar-end ml-0">
             <div class="navbar-item py-0">
-               <form class="search-wrapper hide-on-desktop my-3" class="search-wrapper" action="search.html">
-                  <input id="search-by" name="s" type="search" class="input" placeholder="Rechercher...">
-                  <button class="border-0 bg-white p-3" type="submit"><i class="ti ti-search"></i></button>
+               <form class="search-wrapper hide-on-desktop my-3" class="search-wrapper">
+                  <input id="searchInput" name="s" type="search" class="input" placeholder="Rechercher...">
+                  <button type="button" id="clearBtn" class="border-0 bg-white p-3"><i class="ti ti-close"></i></button>
+                  <button id="searchIcon" aria-hidden="true" class="border-0 bg-white p-3"><i class="ti ti-search"></i></button>
                </form>
-
                <a href="https://www.lemondeinformatique.fr/securite-informatique-3.html" target="_blank" class="btn btn-sm btn-outline-primary ml-4">Actu Cyber</a>
-               <a href="contact.html" class="btn btn-sm btn-primary ml-4">Assistance</a>
+               <a href="https://zmail.casud.re/?app=mail&view=compose&to=dsi@casud.re&subject=Demande%20d%27assistance&body=Bonjour%20DSI,%0A%0AMerci%20de%20prendre%20en%20compte%20ma%20demande%20d%27assistance." class="btn btn-sm btn-primary ml-4" target="_blank">Assistance</a>
             </div>
          </div>
       </div>
@@ -78,6 +78,10 @@
       <div id="search-results-doc"></div>
    </div>
 </nav>
+<div class="is-relative is-flex is-flex-direction-row is-justify-content-center is-align-items-center py-2" style="width: 100%;">
+   <ul id="resultsList" style="width: 40%;"></ul>
+</div>
+
 
    <section class="pt-5">
       <div class="container shadow section-sm rounded">
@@ -95,13 +99,13 @@
 
                <!-- Pagination dynamique -->
                <nav class="pagination">
-                  <button class="nav nav-prev" id="prevBtn">
-                     <i class="ti ti-arrow-left mr-2"></i>
+                  <button class="nav nav-prev" id="prevBtn" title="Utilisez touche ← pour naviguer">
+                     <img src="images/arrow-left.png" alt="godocs" width="40px" class="keyboard-press">
                      <span class="d-none d-md-block">Précédent</span>
                   </button>
-                  <button class="nav nav-next" id="nextBtn">
+                  <button class="nav nav-next" id="nextBtn" title="Utilisez touche → pour naviguer">
                      <span class="d-none d-md-block">Suivant</span>
-                     <i class="ti ti-arrow-right ml-2"></i>
+                     <img src="images/arrow-right.png" alt="godocs" width="40px">
                   </button>
                </nav>
             </div>
@@ -115,8 +119,8 @@
          <div class="column is-4-desktop is-12-tablet">
             <ul class="list-inline footer-menu has-text-centered has-text-left-desktop">
                <li class="list-inline-item"><a href="https://www.lemondeinformatique.fr/securite-informatique-3.html" target="_blank">Actu Cyber</a></li>
-               <li class="list-inline-item"><a href="contact.html">Assistance</a></li>
-               <li class="list-inline-item"><a href="search.html">Recherche</a></li>
+               <li class="list-inline-item"><a href="https://zmail.casud.re/?app=mail&view=compose&to=dsi@casud.re&subject=Demande%20d%27assistance&body=Bonjour%20DSI,%0A%0AMerci%20de%20prendre%20en%20compte%20ma%20demande%20d%27assistance." target="_blank">Assistance</a></li>
+               <li class="list-inline-item"><a href="#faq">FAQ</a></li>
             </ul>
          </div>
          <div class="column is-4-desktop is-12-tablet">

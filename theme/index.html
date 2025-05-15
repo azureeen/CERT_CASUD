@@ -25,8 +25,8 @@
 
   <!-- JS -->
   <script src="js/ymlData.js"></script>
-  <script src="js/search.js"></script>
-  <script src="js/docs-nav.js" type="module"></script>
+  <script src="js/docs.js" type="module"></script>
+  <script src="js/search.js" type="module"></script>
 </head>
 
 <body>
@@ -55,7 +55,7 @@
          <div class="navbar-end ml-0">
             <div class="navbar-item py-0">
                <a href="https://www.lemondeinformatique.fr/securite-informatique-3.html" target="_blank" class="btn btn-sm btn-outline-primary ml-4">Actu Cyber</a>
-               <a href="contact.html" class="btn btn-sm btn-primary ml-4">Assistance</a>
+               <a href="https://zmail.casud.re/?app=mail&view=compose&to=dsi@casud.re&subject=Demande%20d%27assistance&body=Bonjour%20DSI,%0A%0AMerci%20de%20prendre%20en%20compte%20ma%20demande%20d%27assistance." class="btn btn-sm btn-primary ml-4" target="_blank">Assistance</a>
             </div>
          </div>
       </div>
@@ -70,14 +70,18 @@
             <h1 class="mb-4">CASUD, Ensemble, protégeons notre collectivité.</h1>
             <p class="mb-4">Bienvenue sur l&rsquo;espace cybersécurité de la CASUD. 
                Ce portail a pour mission de vous aider à mieux comprendre les enjeux de la sécurité numérique, adopter les bons réflexes au quotidien, et contribuer activement à la protection de nos données, services et équipements.</p>
-            <form class="search-wrapper" action="search.html">
-               <input id="cyber-search" name="s" type="search" class="input input-lg"
+            <form class="search-wrapper">
+               <input id="searchInput" name="s" type="search" class="input input-lg"
                   placeholder="Rechercher dans la documentation...">
-               <button type="submit" class="btn btn-primary">Search</button>
+               <button type="button" id="clearBtn"
+                     style="position: absolute; right: 0.5em; top: 50%; transform: translateY(-50%); font-size: 1.4em;">
+                  <i class="ti ti-close"></i></button>
+               <button id="searchIcon" aria-hidden="true" 
+                     style="position: absolute; right: 0.5em; top: 50%; transform: translateY(-50%); font-size: 1.4em;">
+                  <i class="ti ti-search"></i>
+               </button>
             </form>
-            <div id="search-results" class="results-section">
-               <!-- Les résultats de recherche seront affichés ici -->
-           </div>
+            <ul id="resultsList"></ul>
          </div>
          <div class="column is-4-desktop hidden-on-tablet">
             <img src="images/banner.png" alt="illustration" class="img-fluid">
@@ -142,7 +146,7 @@
 <!-- /topics -->
 
 <!-- faq -->
-<section class="section pb-0">
+<section class="section pb-0" id="faq">
    <div class="container">
      <h2 class="section-title">FAQ – Questions fréquentes</h2>
      <div class="masonry-wrapper">
@@ -245,7 +249,7 @@
          <div class="column is-8-desktop has-text-centered-mobile has-text-centered-tablet has-text-left-desktop">
             <h2 class="mb-3">Toujours pas trouvé votre réponse ?</h2>
             <p>Si vous avez des questions spécifiques concernant la cybersécurité ou si vous avez besoin d’assistance, n'hésitez pas à nous contacter. Nous sommes là pour vous aider à mieux comprendre les enjeux et vous accompagner dans l’application des bonnes pratiques en matière de sécurité numérique.</p>
-            <a href="contact.html" class="btn btn-primary">Contacter la DSI</a>
+            <a href="https://zmail.casud.re/?app=mail&view=compose&to=dsi@casud.re&subject=Demande%20d%27assistance&body=Bonjour%20DSI,%0A%0AMerci%20de%20prendre%20en%20compte%20ma%20demande%20d%27assistance." class="btn btn-primary">Contacter la DSI</a>
          </div>
       </div>
    </div>
@@ -258,8 +262,8 @@
          <div class="column is-4-desktop is-12-tablet">
             <ul class="list-inline footer-menu has-text-centered has-text-left-desktop">
                <li class="list-inline-item"><a href="https://www.lemondeinformatique.fr/securite-informatique-3.html" target="_blank">Actu Cyber</a></li>
-               <li class="list-inline-item"><a href="contact.html">Assistance</a></li>
-               <li class="list-inline-item"><a href="search.html">Recherche</a></li>
+               <li class="list-inline-item"><a href="https://zmail.casud.re/?app=mail&view=compose&to=dsi@casud.re&subject=Demande%20d%27assistance&body=Bonjour%20DSI,%0A%0AMerci%20de%20prendre%20en%20compte%20ma%20demande%20d%27assistance." target="_blank">Assistance</a></li>
+               <li class="list-inline-item"><a href="#faq">FAQ</a></li>
             </ul>
          </div>
          <div class="column is-4-desktop is-12-tablet">
