@@ -176,7 +176,8 @@ gulp.task(
         host: '0.0.0.0', // Écouter sur toutes les interfaces
         port: 3000, // Port utilisé
         open: false, // Ne pas ouvrir automatiquement dans le navigateur
-        notify: false // Désactive les notifications de BrowserSync
+        notify: false, // Désactive les notifications de BrowserSync
+        ghostMode: false // <--- désactive toute synchronisation d’interaction
       });
     })
   )
